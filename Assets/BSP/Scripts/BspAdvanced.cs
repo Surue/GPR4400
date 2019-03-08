@@ -7,14 +7,14 @@ using UnityEditor;
 public class BspAdvanced : MonoBehaviour
 {
     //Option 
-    [Range(0, 5000)] [SerializeField] float sizeX;
-    [Range(0, 5000)] [SerializeField] float sizeY;
+    [Range(0, 50)] [SerializeField] float sizeX;
+    [Range(0, 50)] [SerializeField] float sizeY;
 
-    [Range(0, 5000)] [SerializeField] float minSizeX;
-    [Range(0, 5000)] [SerializeField] float minSizeY;
+    [Range(0, 50)] [SerializeField] float minSizeX;
+    [Range(0, 50)] [SerializeField] float minSizeY;
 
-    [Range(0, 5000)] [SerializeField] float maxSizeX;
-    [Range(0, 5000)] [SerializeField] float maxSizeY;
+    [Range(0, 50)] [SerializeField] float maxSizeX;
+    [Range(0, 50)] [SerializeField] float maxSizeY;
 
     [Range(0, 1)] [SerializeField] float probabilityToCut;
     [Range(0, 1)] [SerializeField] float probabilityToByXOrByY;
@@ -28,20 +28,20 @@ public class BspAdvanced : MonoBehaviour
         public List<Room> children;
     }
 
-    Room rootRoom;
+    Room _RootRoom;
 
 
     public void Generate()
     {
-        rootRoom.extends = new Vector2(sizeX * 2, sizeY * 2);
-        rootRoom.center = Vector2.zero;
-        rootRoom.children = new List<Room>();
+        _RootRoom.extends = new Vector2(sizeX * 2, sizeY * 2);
+        _RootRoom.center = Vector2.zero;
+        _RootRoom.children = new List<Room>();
 
-        rootRoom.children.AddRange(CheckDivision(rootRoom));
+        _RootRoom.children.AddRange(CheckDivision(_RootRoom));
     }
 
     public void Clear() {
-        rootRoom = new Room();
+        _RootRoom = new Room();
     }
 
     List<Room> CheckDivision(Room room)
@@ -156,7 +156,7 @@ public class BspAdvanced : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        DrawRoom(rootRoom);
+        DrawRoom(_RootRoom);
     }
 
     static void DrawRoom(Room room)
@@ -173,7 +173,7 @@ public class BspAdvanced : MonoBehaviour
 
 #if UNITY_EDITOR
 [CustomEditor(typeof(BspAdvanced))]
-public class BSPAdvancedEditor : Editor
+public class BspAdvancedEditor : Editor
 {
     public override void OnInspectorGUI() {
         BspAdvanced myTarget = (BspAdvanced)target;

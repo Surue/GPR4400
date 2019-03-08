@@ -8,11 +8,11 @@ using UnityEditor;
 public class Bsp : MonoBehaviour
 {
     //Option 
-    [Range(0, 5000)] [SerializeField] float sizeX;
-    [Range(0, 5000)] [SerializeField] float sizeY;
+    [Range(0, 50)] [SerializeField] float sizeX;
+    [Range(0, 50)] [SerializeField] float sizeY;
 
-    [Range(0, 5000)] [SerializeField] float roomSizeX;
-    [Range(0, 5000)] [SerializeField] float roomSizeY;
+    [Range(0, 50)] [SerializeField] float roomSizeX;
+    [Range(0, 50)] [SerializeField] float roomSizeY;
 
     //Struct
     struct Room {
@@ -22,19 +22,19 @@ public class Bsp : MonoBehaviour
         public List<Room> children;
     }
 
-    Room rootRoom;
+    Room _RootRoom;
 
     public void Generate() {
-        rootRoom.extends = new Vector2(sizeX * 2, sizeY * 2);
-        rootRoom.center = Vector2.zero;
-        rootRoom.children = new List<Room>();
+        _RootRoom.extends = new Vector2(sizeX * 2, sizeY * 2);
+        _RootRoom.center = Vector2.zero;
+        _RootRoom.children = new List<Room>();
 
-        rootRoom.children.AddRange(CheckDivision(rootRoom));
+        _RootRoom.children.AddRange(CheckDivision(_RootRoom));
     }
 
     public void Clear()
     {
-        rootRoom = new Room();
+        _RootRoom = new Room();
     }
 
     List<Room> CheckDivision(Room room) {
@@ -120,7 +120,7 @@ public class Bsp : MonoBehaviour
     }
 
     void OnDrawGizmos() {
-        DrawRoom(rootRoom);
+        DrawRoom(_RootRoom);
     }
 
     static void DrawRoom(Room room) {
@@ -136,7 +136,7 @@ public class Bsp : MonoBehaviour
 
 #if UNITY_EDITOR
 [CustomEditor(typeof(Bsp))]
-public class BSPEditor:Editor {
+public class BspEditor:Editor {
     public override void OnInspectorGUI() {
         Bsp myTarget = (Bsp)target;
 
