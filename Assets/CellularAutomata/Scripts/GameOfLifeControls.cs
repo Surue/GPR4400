@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class GameOfLife : MonoBehaviour
+public class GameOfLifeControls : MonoBehaviour
 {
     [Header("Grid")]
     [Range(0, 100)][SerializeField] int sizeX = 50;
@@ -12,6 +12,26 @@ public class GameOfLife : MonoBehaviour
 
     [Header("Cells")]
     [Range(0, 1)] [SerializeField] float probabilityIsAlive = 0.5f;
+
+    [SerializeField] bool s0 = false;
+    [SerializeField] bool s1 = false;
+    [SerializeField] bool s2 = false;
+    [SerializeField] bool s3 = false;
+    [SerializeField] bool s4 = false;
+    [SerializeField] bool s5 = false;
+    [SerializeField] bool s6 = false;
+    [SerializeField] bool s7 = false;
+    [SerializeField] bool s8 = false;
+
+    [SerializeField] bool b0 = false;
+    [SerializeField] bool b1 = false;
+    [SerializeField] bool b2 = false;
+    [SerializeField] bool b3 = false;
+    [SerializeField] bool b4 = false;
+    [SerializeField] bool b5 = false;
+    [SerializeField] bool b6 = false;
+    [SerializeField] bool b7 = false;
+    [SerializeField] bool b8 = false;
 
     bool isRunning = false;
 
@@ -30,6 +50,9 @@ public class GameOfLife : MonoBehaviour
     Cell[,] cells;
     #endregion
 
+    List<int> ruleS;
+    List<int> ruleB;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +68,8 @@ public class GameOfLife : MonoBehaviour
         }
 
         isRunning = true;
+
+        SetRules();
 
         StartCoroutine(Simulate());
     }
@@ -72,21 +97,13 @@ public class GameOfLife : MonoBehaviour
                         }
                     }
 
-                    if (cells[x, y].currentState && (aliveNeighbours == 2 || aliveNeighbours == 3)) {
+                    if (cells[x, y].currentState && ruleS.Contains(aliveNeighbours)) {
                         cells[x, y].futureState = true;
-                    } else if (!cells[x, y].currentState && aliveNeighbours == 3) {
+                    } else if (!cells[x, y].currentState && ruleB.Contains(aliveNeighbours)) {
                         cells[x, y].futureState = true;
                     } else {
                         cells[x, y].futureState = false;
                     }
-
-                    //    if (cells[x, y].currentState && (aliveNeighbours < 2 || aliveNeighbours > 3)) {
-                    //    cells[x, y].futureState = false;
-                    //} else if (cells[x, y].currentState && (aliveNeighbours == 2 || aliveNeighbours == 3)) {
-                    //    cells[x, y].futureState = true;
-                    //} else if (!cells[x, y].currentState && aliveNeighbours == 3) {
-                    //    cells[x, y].futureState = true;
-                    //}
                 }
             }
 
@@ -97,6 +114,68 @@ public class GameOfLife : MonoBehaviour
             }
 
             yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    void SetRules()
+    {
+        ruleB = new List<int>();
+        ruleS = new List<int>();
+
+        if (b0) {
+            ruleB.Add(0);
+        }
+        if(b1) {
+            ruleB.Add(1);
+        }
+        if(b2) {
+            ruleB.Add(2);
+        }
+        if(b3) {
+            ruleB.Add(3);
+        }
+        if(b4) {
+            ruleB.Add(4);
+        }
+        if(b5) {
+            ruleB.Add(5);
+        }
+        if(b6) {
+            ruleB.Add(6);
+        }
+        if(b7) {
+            ruleB.Add(7);
+        }
+        if(b8) {
+            ruleB.Add(8);
+        }
+
+        if(s0) {
+            ruleS.Add(0);
+        }
+        if(s1) {
+            ruleS.Add(1);
+        }
+        if(s2) {
+            ruleS.Add(2);
+        }
+        if(s3) {
+            ruleS.Add(3);
+        }
+        if(s4) {
+            ruleS.Add(4);
+        }
+        if(s5) {
+            ruleS.Add(5);
+        }
+        if(s6) {
+            ruleS.Add(6);
+        }
+        if(s7) {
+            ruleS.Add(7);
+        }
+        if(s8) {
+            ruleS.Add(8);
         }
     }
 
