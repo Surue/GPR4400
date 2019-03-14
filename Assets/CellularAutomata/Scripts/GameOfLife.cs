@@ -16,10 +16,7 @@ public class GameOfLife : MonoBehaviour
     bool isRunning = false;
 
     #region struct
-    struct Grid
-    {
 
-    }
 
     struct Cell
     {
@@ -79,14 +76,6 @@ public class GameOfLife : MonoBehaviour
                     } else {
                         cells[x, y].futureState = false;
                     }
-
-                    //    if (cells[x, y].currentState && (aliveNeighbours < 2 || aliveNeighbours > 3)) {
-                    //    cells[x, y].futureState = false;
-                    //} else if (cells[x, y].currentState && (aliveNeighbours == 2 || aliveNeighbours == 3)) {
-                    //    cells[x, y].futureState = true;
-                    //} else if (!cells[x, y].currentState && aliveNeighbours == 3) {
-                    //    cells[x, y].futureState = true;
-                    //}
                 }
             }
 
