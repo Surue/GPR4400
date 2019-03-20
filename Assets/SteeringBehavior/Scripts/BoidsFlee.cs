@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Boids : MonoBehaviour
+public class BoidsFlee : MonoBehaviour
 {
     [Header("Boids")]
     [SerializeField] float maxSpeed;
     [SerializeField] float maxForce;
     [SerializeField] float viewRadius;
-
-    [Header("Behaviors")] [SerializeField] bool bSeek;
 
     Rigidbody2D body;
     Vector2 desiredVelocity;
@@ -32,15 +30,15 @@ public class Boids : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        desiredVelocity = Vector2.zero;
+
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, viewRadius);
         
         foreach (Collider2D col in colliders) {
-            if (bSeek) {
-                if (col.gameObject.CompareTag("Attractor")) {
-                    Vector2 seekVelocity = col.transform.position - transform.position;
-                    seekVelocity = seekVelocity.normalized * maxSpeed;
-                    desiredVelocity += seekVelocity - body.velocity;
-                }
+            if (col.gameObject.CompareTag("Repulsor")) {
+                Vector2 seekVelocity = transform.position - col.transform.position;
+                seekVelocity = seekVelocity.normalized * maxSpeed;
+                desiredVelocity += seekVelocity - body.velocity;
             }
         }
 
@@ -71,9 +69,4 @@ public class Boids : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawLine(position, position + (Vector3)desiredVelocity);
     }
-}
-
-public abstract class SteeringBehavior
-{
-    public abstract Vector2 Steer(Rigidbody2D body,  Collider2D col, float maxSpeed);
 }

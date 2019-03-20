@@ -273,7 +273,7 @@ PrefabInstance:
     - target: {fileID: 6677030666202177348, guid: e1ab0836d25be174f891382585403e3f,
         type: 3}
       propertyPath: m_Name
-      value: Boids
+      value: BoidsSeek
       objectReference: {fileID: 0}
     - target: {fileID: 6677030666202177352, guid: e1ab0836d25be174f891382585403e3f,
         type: 3}
