@@ -7,6 +7,7 @@ TagManager:
   - EnnemySpawner
   - Attractor
   - Repulsor
+  - Boids
   layers:
   - Default
   - TransparentFX

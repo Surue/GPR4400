@@ -35,8 +35,8 @@ public class BoidsCombinations : MonoBehaviour
         Vector2 seekForce = Seek();
         Vector2 separateForce = Separate();
 
-        seekForce *= 1f;
-        separateForce *= 1f;
+        seekForce *= 1.5f;
+        separateForce *= 0.5f;
 
         body.AddForce(seekForce);
         body.AddForce(separateForce);

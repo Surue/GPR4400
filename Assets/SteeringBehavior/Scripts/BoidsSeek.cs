@@ -10,8 +10,6 @@ public class BoidsSeek : MonoBehaviour
     [SerializeField] float maxForce;
     [SerializeField] float viewRadius;
 
-    [Header("Behaviors")] [SerializeField] bool bSeek;
-
     Rigidbody2D body;
     Vector2 desiredVelocity;
 
@@ -37,13 +35,11 @@ public class BoidsSeek : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, viewRadius);
         
         foreach (Collider2D col in colliders) {
-            if (bSeek) {
                 if (col.gameObject.CompareTag("Attractor")) {
                     Vector2 seekVelocity = col.transform.position - transform.position;
-                    seekVelocity = seekVelocity.normalized * maxSpeed;
+                    //seekVelocity = seekVelocity.normalized * maxSpeed;
                     desiredVelocity += seekVelocity - body.velocity;
                 }
-            }
         }
 
         if (desiredVelocity.magnitude > maxForce) {
@@ -64,8 +60,8 @@ public class BoidsSeek : MonoBehaviour
 
         Vector3 position = transform.position;
 
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(position, viewRadius);
+        //Gizmos.color = Color.white;
+        //Gizmos.DrawWireSphere(position, viewRadius);
 
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(position, position + (Vector3)body.velocity);
