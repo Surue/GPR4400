@@ -89,15 +89,8 @@ public class MazeGenerator : MonoBehaviour
     {
     }
 
-    int step = 10;
-
     void GenerateChunkChild(Cell cell)
     {
-        step--;
-
-        if (step < 0) {
-            return;
-        }
 
         if (cell.chunk.down && cells[cell.x, cell.y - 1].chunk == null) {
             Rule rule = GetRulesForNextChunk(cell.x, cell.y - 1);
