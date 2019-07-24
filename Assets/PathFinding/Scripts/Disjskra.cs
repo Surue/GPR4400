@@ -126,6 +126,8 @@ public class Disjskra : MonoBehaviour
             } else {
                 foreach(Node currentNodeNeighbor in currentNode.neighbors) {
 
+                    if(closedList.Contains(currentNodeNeighbor)) continue;
+
                     float modifier;
                     if (currentNode.pos.x == currentNodeNeighbor.pos.x ||
                         currentNode.pos.y == currentNodeNeighbor.pos.y) {

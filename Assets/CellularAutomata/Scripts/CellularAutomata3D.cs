@@ -118,12 +118,10 @@ public class CellularAutomata3D : MonoBehaviour
         for(int x = 0;x < size;x++) {
             for(int y = 0;y < size;y++) {
                 for(int z = 0;z < size;z++) {
-                    if (!cells[x, y, z].isAlive) {
+                    if (cells[x, y, z].isAlive) {
                         GameObject instance = GameObject.Instantiate(cubePrefab);
 
                         instance.transform.position = new Vector3(x, y, z);
-
-
                     }
                 }
             }
