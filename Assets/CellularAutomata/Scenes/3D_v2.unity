@@ -220,10 +220,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 404378685}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41da33f93cd4d8b4d834553c29df75ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c8e25182fdbf524f963f6418ec6b8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 50
+  size: 100
   iteration: 10
   cubePrefab: {fileID: 3554834603993467868, guid: fc9e1abbed75de547836d5aeae152fe1,
     type: 3}

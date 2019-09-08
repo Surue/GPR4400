@@ -45,7 +45,7 @@ public class CellularAutomata3D : MonoBehaviour
         //Cellular automata
         for (int i = 0; i < iteration; i++) {
             Cellular();
-            yield return new WaitForEndOfFrame();
+            yield return null;
         }
 
         isRunning = false;
@@ -118,27 +118,13 @@ public class CellularAutomata3D : MonoBehaviour
         for(int x = 0;x < size;x++) {
             for(int y = 0;y < size;y++) {
                 for(int z = 0;z < size;z++) {
-                    if (cells[x, y, z].isAlive) {
-                        GameObject instance = GameObject.Instantiate(cubePrefab);
-
-                        instance.transform.position = new Vector3(x, y, z);
+                    if (!cells[x, y, z].isAlive) {
+                        continue;
                     }
-                }
-            }
-        }
-    }
+                    
+                    GameObject instance = Instantiate(cubePrefab);
 
-    void OnDrawGizmos()
-    {
-        if (!isRunning) return;
-
-        for(int x = 0;x < size;x++) {
-            for(int y = 0;y < size;y++) {
-                for(int z = 0;z < size;z++) {
-                    if(cells[x, y, z].isAlive) {
-                        Gizmos.color = Color.white;
-                        Gizmos.DrawCube(new Vector3(x, y, z), Vector3.one);
-                    }
+                    instance.transform.position = new Vector3(x, y, z);
                 }
             }
         }

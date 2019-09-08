@@ -37,7 +37,7 @@ public class NavigationGraphGeneration : MonoBehaviour
     {
         GenerateGraph();
 
-        StartCoroutine(BFS());
+        StartCoroutine(DFS());
     }
 
     void GenerateGraph()
