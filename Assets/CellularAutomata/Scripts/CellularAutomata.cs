@@ -47,11 +47,7 @@ public class CellularAutomata : MonoBehaviour
     {
        Init();
 
-       for (int i = 0; i < iteration; i++) {
-           Cellular();
-       }
-
-       GetRoom();
+       StartCoroutine(Cellular());
     }
 
     void Init()
@@ -69,40 +65,46 @@ public class CellularAutomata : MonoBehaviour
         }
     }
 
-    void Cellular()
+    IEnumerator Cellular()
     {
-        BoundsInt bounds = new BoundsInt(-1, -1, 0, 3, 3, 1);
+        for (int i = 0; i < iteration; i++) {
+            BoundsInt bounds = new BoundsInt(-1, -1, 0, 3, 3, 1);
 
-        for(int x = 0;x < size;x++) {
-            for(int y = 0;y < size;y++) {
-                int aliveNeighbours = 0;
-                foreach(Vector2Int b in bounds.allPositionsWithin) {
-                    if(b.x == 0 && b.y == 0) continue;
-                    if(x + b.x < 0 || x + b.x >= size || y + b.y < 0 || y + b.y >= size) continue;
+            for(int x = 0;x < size;x++) {
+                for(int y = 0;y < size;y++) {
+                    int aliveNeighbours = 0;
+                    foreach(Vector2Int b in bounds.allPositionsWithin) {
+                        if(b.x == 0 && b.y == 0) continue;
+                        if(x + b.x < 0 || x + b.x >= size || y + b.y < 0 || y + b.y >= size) continue;
 
-                    if(cells[x + b.x, y + b.y].isAlive) {
-                        aliveNeighbours++;
+                        if(cells[x + b.x, y + b.y].isAlive) {
+                            aliveNeighbours++;
+                        }
+                    }
+
+                    if(cells[x, y].isAlive && (aliveNeighbours == 1 || aliveNeighbours >= 4)) {
+                        cells[x, y].futureState = true;
+                    } else if(!cells[x, y].isAlive && aliveNeighbours >= 5) {
+                        cells[x, y].futureState = true;
+                    } else {
+                        cells[x, y].futureState = false;
                     }
                 }
+            }
 
-                if(cells[x, y].isAlive && (aliveNeighbours == 1 || aliveNeighbours >= 4)) {
-                    cells[x, y].futureState = true;
-                } else if(!cells[x, y].isAlive && aliveNeighbours >= 5) {
-                    cells[x, y].futureState = true;
-                } else {
-                    cells[x, y].futureState = false;
+            for(int x = 0;x < size;x++) {
+                for(int y = 0;y < size;y++) {
+                    cells[x, y].isAlive= cells[x, y].futureState;
                 }
             }
+
+            yield return null;
         }
 
-        for(int x = 0;x < size;x++) {
-            for(int y = 0;y < size;y++) {
-                cells[x, y].isAlive= cells[x, y].futureState;
-            }
-        }
+        StartCoroutine(GetRoom());
     }
 
-    void GetRoom()
+    IEnumerator GetRoom()
     {
         BoundsInt bounds = new BoundsInt(-1, -1, 0, 3, 3, 1);
 
@@ -148,9 +150,13 @@ public class CellularAutomata : MonoBehaviour
 
                     }
                     openList.RemoveAt(0);
+                    
+                    yield return null;
                 }
 
                 currentRegion++;
+
+                yield return new WaitForSeconds(0.1f);
             }
         }
     }

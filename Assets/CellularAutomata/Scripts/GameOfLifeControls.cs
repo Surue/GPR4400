@@ -36,11 +36,6 @@ public class GameOfLifeControls : MonoBehaviour
     bool isRunning = false;
 
     #region struct
-    struct Grid
-    {
-
-    }
-
     struct Cell
     {
         public bool currentState;
@@ -75,11 +70,9 @@ public class GameOfLifeControls : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    public bool IsRunning() {
+        return isRunning;
     }
-
     IEnumerator Simulate()
     {
         BoundsInt bounds = new BoundsInt(-1, -1, 0, 3, 3, 1);
@@ -113,7 +106,7 @@ public class GameOfLifeControls : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(0.1f);
+            yield return null;
         }
     }
 

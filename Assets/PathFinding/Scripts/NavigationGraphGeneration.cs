@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -22,6 +23,8 @@ public class Node {
 public class NavigationGraphGeneration : MonoBehaviour
 {
     [SerializeField] Tilemap tilemap;
+    [SerializeField] bool isDFS = false;
+    bool currentIsDFS = false;
 
     int minX = 0, maxX = 0, minY = 0, maxY = 0;
 
@@ -37,7 +40,17 @@ public class NavigationGraphGeneration : MonoBehaviour
     {
         GenerateGraph();
 
-        StartCoroutine(DFS());
+        currentIsDFS = isDFS;
+
+        StartCoroutine(currentIsDFS ? DFS() : BFS());
+    }
+
+    void Update() {
+        if (currentIsDFS != isDFS) {
+            currentIsDFS = isDFS;
+            
+            StartCoroutine(currentIsDFS ? DFS() : BFS());
+        }
     }
 
     void GenerateGraph()
