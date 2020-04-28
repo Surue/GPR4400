@@ -190,6 +190,7 @@ MonoBehaviour:
   sizeX: 100
   sizeY: 100
   probabilityIsAlive: 0.5
+  stepTime: 0
   s0: 0
   s1: 1
   s2: 1
@@ -238,7 +239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &131322912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +255,7 @@ MonoBehaviour:
   sizeX: 100
   sizeY: 100
   probabilityIsAlive: 0.5
+  stepTime: 1
   s0: 0
   s1: 1
   s2: 0
@@ -318,6 +320,7 @@ MonoBehaviour:
   sizeX: 100
   sizeY: 100
   probabilityIsAlive: 0.5
+  stepTime: 0
   s0: 0
   s1: 0
   s2: 1
@@ -382,6 +385,7 @@ MonoBehaviour:
   sizeX: 100
   sizeY: 100
   probabilityIsAlive: 0.5
+  stepTime: 0
   s0: 0
   s1: 1
   s2: 0
@@ -446,6 +450,7 @@ MonoBehaviour:
   sizeX: 100
   sizeY: 100
   probabilityIsAlive: 0.5
+  stepTime: 0
   s0: 1
   s1: 0
   s2: 1
@@ -510,6 +515,7 @@ MonoBehaviour:
   sizeX: 100
   sizeY: 100
   probabilityIsAlive: 0.5
+  stepTime: 0
   s0: 1
   s1: 0
   s2: 1
@@ -656,6 +662,7 @@ MonoBehaviour:
   sizeX: 100
   sizeY: 100
   probabilityIsAlive: 0.5
+  stepTime: 0
   s0: 0
   s1: 0
   s2: 0
@@ -720,6 +727,7 @@ MonoBehaviour:
   sizeX: 100
   sizeY: 100
   probabilityIsAlive: 0.5
+  stepTime: 0
   s0: 0
   s1: 1
   s2: 1
@@ -784,6 +792,7 @@ MonoBehaviour:
   sizeX: 100
   sizeY: 100
   probabilityIsAlive: 0.5
+  stepTime: 0
   s0: 1
   s1: 1
   s2: 0

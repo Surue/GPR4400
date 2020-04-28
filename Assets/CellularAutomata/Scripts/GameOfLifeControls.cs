@@ -13,6 +13,9 @@ public class GameOfLifeControls : MonoBehaviour
     [Header("Cells")]
     [Range(0, 1)] [SerializeField] float probabilityIsAlive = 0.5f;
 
+    [Header("Demo")] 
+    [Range(0, 10)] [SerializeField] float stepTime = 0;
+
     [SerializeField] bool s0 = false;
     [SerializeField] bool s1 = false;
     [SerializeField] bool s2 = false;
@@ -75,6 +78,8 @@ public class GameOfLifeControls : MonoBehaviour
     }
     IEnumerator Simulate()
     {
+        yield return new WaitForSeconds(stepTime);
+        
         BoundsInt bounds = new BoundsInt(-1, -1, 0, 3, 3, 1);
         while (true) {
 
@@ -106,7 +111,7 @@ public class GameOfLifeControls : MonoBehaviour
                 }
             }
 
-            yield return null;
+            yield return new WaitForSeconds(stepTime);
         }
     }
 
