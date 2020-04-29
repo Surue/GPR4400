@@ -1,245 +1,237 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using System.Net;
 using UnityEngine;
-using Random = UnityEngine.Random;
+
+public static class IListExtensions {
+    /// <summary>
+    /// Shuffles the element order of the specified list.
+    /// </summary>
+    public static void Shuffle<T>(this IList<T> ts) {
+        var count = ts.Count;
+        var last = count - 1;
+        for (var i = 0; i < last; ++i) {
+            var r = UnityEngine.Random.Range(i, count);
+            var tmp = ts[i];
+            ts[i] = ts[r];
+            ts[r] = tmp;
+        }
+    }
+}
 
 public class MazeGenerator : MonoBehaviour
 {
     [SerializeField] int cellNbX = 2;
     [SerializeField] int cellNbY = 7;
+    
+    [SerializeField][Range(0, 10)] float sizeCell = 5;
 
-    int sizeX = 5;
-    int sizeY = 5;
+    [SerializeField] bool useRandomNeighborsOrder = false;
 
-    struct Cell
-    {
-        public int x;
-        public int y;
-        public Chunck chunk;
+    enum GenerationType {
+        BFS,
+        DFS,
+        BACKTRACE
     }
 
-    [SerializeField] GameObject[] chunksAvailable;
-
-    Cell[,] cells;
-
-    enum RuleState
-    {
-        ALWAYS_TRUE,
-        ALWAYS_FALSE,
-        DONT_CARE
+    [SerializeField] GenerationType generationType;
+    
+    enum CellType {
+        START,
+        END,
+        PASSAGE,
+        WALL
+    }
+    
+    struct Cell {
+        public List<int> neighborsIndices;
+        public CellType cellType;
     }
 
-    struct Rule
-    {
-        public RuleState up;
-        public RuleState down;
-        public RuleState left;
-        public RuleState right;
-    }
-
+    Cell[] cells_;
+    
     // Start is called before the first frame update
     void Start()
     {
-        Generate();
+        BoundsInt bounds = new BoundsInt(-1, -1, 0, 3, 3, 1);
+        
+        cells_ = new Cell[cellNbX * cellNbY];
+        
+        for (int x = 0; x < cellNbX; x++) {
+            for(int y = 0; y < cellNbY; y++) {
+
+                int index = PosToIndex(x, y);
+                
+                //Default type is wall
+                cells_[index].cellType = CellType.WALL;
+                
+                //Get neighbors indices
+                cells_[index].neighborsIndices = new List<int>(4);
+
+                foreach (Vector3Int pos in bounds.allPositionsWithin) {
+                    //Check if is bounds or array
+                    if(x + pos.x < 0 || x + pos.x >= cellNbX) continue;
+                    if(y + pos.y < 0 || y + pos.y >= cellNbY) continue;
+                    
+                    //Ignore self
+                    if(pos.x == 0 && pos.y == 0) continue;
+                    
+                    //Taking only the cross
+                    if(pos.x != 0 && pos.y != 0) continue;
+                    
+                    //Add neighbors
+                    cells_[index].neighborsIndices.Add(PosToIndex(x + pos.x, y + pos.y));
+                }
+                
+                if(useRandomNeighborsOrder)
+                    cells_[index].neighborsIndices.Shuffle();
+            }
+        }
+
+        if (generationType == GenerationType.BACKTRACE) {
+            StartCoroutine(BuildMazeBacktrace());
+        } else {
+            StartCoroutine(BuildMaze());
+        }
     }
+    
+    IEnumerator BuildMazeBacktrace() {
+        //Generate starting pos
+        cells_[0].cellType = CellType.START;
+        yield return new WaitForSeconds(1);
 
-    void Generate()
-    {
-        if (sizeX > 0 & sizeY > 0) {
-            cells = new Cell[cellNbX, cellNbY];
+        //Link case together
+        BoundsInt bounds = new BoundsInt(-1, -1, 0, 3, 3, 1);
+        List<int> openList = new List<int> {0};
+        List<int> closedList = new List<int>();
 
-            for (int x = 0; x < cellNbX; x++) {
-                for (int y = 0; y < cellNbY; y++) {
-                    cells[x, y].x = x;
-                    cells[x, y].y = y;
+        while (openList.Count > 0) {
+            int indexToSelectFrom = 0;
+
+            int index = openList[indexToSelectFrom];
+            
+//          closedList.Add(openList[indexToSelectFrom]);
+            openList.RemoveAt(indexToSelectFrom);
+
+            foreach (int neighborsIndex in cells_[index].neighborsIndices) {
+                bool canBeAddedToPassage = true;
+                
+                //Check if the neighbors of the current neighbors are all wall (we don't want loop)
+                foreach (int neighborsIndex2 in cells_[neighborsIndex].neighborsIndices) {
+                    
+                    //Ignore the current cell
+                    if(neighborsIndex2 == index) continue;
+                    
+                    if (cells_[neighborsIndex2].cellType == CellType.WALL) continue;
+                    canBeAddedToPassage = false;
+                    break;
+                }
+
+                if (canBeAddedToPassage && !openList.Contains(neighborsIndex) && !closedList.Contains(neighborsIndex)) {
+                    openList.Add(neighborsIndex);
+                    closedList.Add(neighborsIndex);
+                    cells_[neighborsIndex].cellType = CellType.PASSAGE;
                 }
             }
-
-            GenerateStartChunk();
+            yield return new WaitForSeconds(0.1f);
         }
+
+        //Select end pos
+        cells_[closedList[closedList.Count - 1]].cellType = CellType.END;
     }
 
-    void GenerateStartChunk()
-    {
-        GameObject newChunk = chunksAvailable[1];
+    IEnumerator BuildMaze() {
+        //Generate starting pos
+        cells_[0].cellType = CellType.START;
+        yield return new WaitForSeconds(1);
 
-        List<GameObject> possibleNewChunk = new List<GameObject>();
+        //Link case together
+        BoundsInt bounds = new BoundsInt(-1, -1, 0, 3, 3, 1);
+        List<int> openList = new List<int> {0};
+        List<int> closedList = new List<int>();
 
-        for (int i = 0; i < chunksAvailable.Length; i++) {
-            Chunck currentChunk = chunksAvailable[i].GetComponent<Chunck>();
+        while (openList.Count > 0) {
+            int indexToSelectFrom = 0;
 
-            if ((currentChunk.right || currentChunk.up) && !currentChunk.left && !currentChunk.down) {
-                possibleNewChunk.Add(chunksAvailable[i]);
+            if (generationType == GenerationType.BFS) {
+                indexToSelectFrom = 0;
+            }else if (generationType == GenerationType.DFS) {
+                indexToSelectFrom = openList.Count - 1;
             }
+            
+            int index = openList[indexToSelectFrom];
+            
+//            closedList.Add(openList[indexToSelectFrom]);
+            openList.RemoveAt(indexToSelectFrom);
+
+            foreach (int neighborsIndex in cells_[index].neighborsIndices) {
+                bool canBeAddedToPassage = true;
+                
+                //Check if the neighbors of the current neighbors are all wall (we don't want loop)
+                foreach (int neighborsIndex2 in cells_[neighborsIndex].neighborsIndices) {
+                    
+                    //Ignore the current cell
+                    if(neighborsIndex2 == index) continue;
+                    
+                    if (cells_[neighborsIndex2].cellType == CellType.WALL) continue;
+                    canBeAddedToPassage = false;
+                    break;
+                }
+
+                if (canBeAddedToPassage && !openList.Contains(neighborsIndex) && !closedList.Contains(neighborsIndex)) {
+                    openList.Add(neighborsIndex);
+                    closedList.Add(neighborsIndex);
+                    cells_[neighborsIndex].cellType = CellType.PASSAGE;
+                }
+            }
+            yield return new WaitForSeconds(0.1f);
         }
 
-        newChunk = possibleNewChunk[Random.Range(0, possibleNewChunk.Count)];
-
-        GameObject startChunk = GameObject.Instantiate(newChunk);
-        startChunk.name = "StartChunk";
-        startChunk.transform.position = new Vector2(0 + sizeX / 2f, 0 + sizeY / 2f);
-
-        cells[0, 0].chunk = startChunk.GetComponent<Chunck>();
-
-        GenerateChunkChild(cells[0, 0]);
+        //Select end pos
+        cells_[closedList[closedList.Count - 1]].cellType = CellType.END;
     }
 
-    void GenerateLevel()
-    {
+    int PosToIndex(int x, int y) {
+        return x * cellNbX + y;
     }
 
-    void GenerateChunkChild(Cell cell)
-    {
-
-        if (cell.chunk.down && cells[cell.x, cell.y - 1].chunk == null) {
-            Rule rule = GetRulesForNextChunk(cell.x, cell.y - 1);
-
-            GameObject newChunk = SelectChunk(rule);
-
-            if (newChunk != null) {
-                GameObject instance = GameObject.Instantiate(SelectChunk(rule));
-
-                instance.name = "Chunk (" + cell.x.ToString() + ", " + (cell.y - 1).ToString() + ")";
-                instance.transform.position =
-                    new Vector2(sizeX * (cell.x) + sizeX / 2f, sizeY * (cell.y - 1) + sizeY / 2f);
-
-                cells[cell.x, cell.y - 1].chunk = instance.GetComponent<Chunck>();
-
-                GenerateChunkChild(cells[cell.x, cell.y - 1]);
-            }
-        }
-
-        if (cell.chunk.up && cells[cell.x, cell.y + 1].chunk == null) {
-            Rule rule = GetRulesForNextChunk(cell.x, cell.y + 1);
-
-            GameObject newChunk = SelectChunk(rule);
-
-            if (newChunk != null) {
-                GameObject instance = GameObject.Instantiate(SelectChunk(rule));
-                instance.name = "Chunk (" + cell.x.ToString() + ", " + (cell.y + 1).ToString() + ")";
-                instance.transform.position =
-                    new Vector2(sizeX * (cell.x) + sizeX / 2f, sizeY * (cell.y + 1) + sizeY / 2f);
-
-                cells[cell.x, cell.y + 1].chunk = instance.GetComponent<Chunck>();
-
-                GenerateChunkChild(cells[cell.x, cell.y + 1]);
-            }
-        }
-
-        if (cell.chunk.left && cells[cell.x - 1, cell.y].chunk == null) {
-            Rule rule = GetRulesForNextChunk(cell.x - 1, cell.y);
-
-            GameObject newChunk = SelectChunk(rule);
-
-            if (newChunk != null) {
-                GameObject instance = GameObject.Instantiate(SelectChunk(rule));
-                instance.name = "Chunk (" + (cell.x - 1).ToString() + ", " + (cell.y).ToString() + ")";
-                instance.transform.position =
-                    new Vector2(sizeX * (cell.x - 1) + sizeX / 2f, sizeY * (cell.y) + sizeY / 2f);
-
-                cells[cell.x - 1, cell.y].chunk = instance.GetComponent<Chunck>();
-
-                GenerateChunkChild(cells[cell.x - 1, cell.y]);
-            }
-        }
-
-        if (cell.chunk.right && cells[cell.x + 1, cell.y].chunk == null) {
-            Rule rule = GetRulesForNextChunk(cell.x + 1, cell.y);
-
-            GameObject newChunk = SelectChunk(rule);
-
-            if (newChunk != null) {
-                GameObject instance = GameObject.Instantiate(SelectChunk(rule));
-                instance.name = "Chunk (" + (cell.x + 1).ToString() + ", " + (cell.y).ToString() + ")";
-                instance.transform.position =
-                    new Vector2(sizeX * (cell.x + 1) + sizeX / 2f, sizeY * (cell.y) + sizeY / 2f);
-
-                cells[cell.x + 1, cell.y].chunk = instance.GetComponent<Chunck>();
-
-                GenerateChunkChild(cells[cell.x + 1, cell.y]);
-            }
-        }
-
-        //Pour chaque porte on vérifie les voisins
+    Vector2 IndexToPos(int index) {
+        int x = index / cellNbX;
+        int y = index % cellNbX;
+        
+        return new Vector2(x, y);
+    }
+    
+    Vector2 IndexToWorldPos(int index) {
+        int x = index / cellNbX;
+        int y = index % cellNbX;
+        
+        return new Vector2(x * sizeCell + (sizeCell * 0.5f), y * sizeCell + (sizeCell * 0.5f));
     }
 
-    Rule GetRulesForNextChunk(int x, int y)
-    {
-        Rule rule;
-        rule.up = RuleState.DONT_CARE;
-        rule.left = RuleState.DONT_CARE;
-        rule.right = RuleState.DONT_CARE;
-        rule.down = RuleState.DONT_CARE;
-
-        //down
-        if (y > 0) {
-            if (cells[x, y - 1].chunk != null) {
-                rule.down = cells[x, y - 1].chunk.up ? RuleState.ALWAYS_TRUE : RuleState.ALWAYS_FALSE;
+    void OnDrawGizmos() {
+        if (cells_ == null) return;
+        
+        for (int i = 0; i < cellNbX * cellNbY; i++) {
+            switch (cells_[i].cellType) {
+                case CellType.START:
+                    Gizmos.color = Color.blue;
+                    break;
+                case CellType.END:
+                    Gizmos.color = Color.red;
+                    break;
+                case CellType.PASSAGE:
+                    Gizmos.color = Color.white;
+                    break;
+                case CellType.WALL:
+                    Gizmos.color = Color.black;
+                    break;
+                default:
+                    Gizmos.color = Color.black;
+                    break;
             }
-        } else {
-            rule.down = RuleState.ALWAYS_FALSE;
-        }
-
-        //left
-        if (x > 0) {
-            if (cells[x - 1, y].chunk != null) {
-                rule.left = cells[x - 1, y].chunk.right ? RuleState.ALWAYS_TRUE : RuleState.ALWAYS_FALSE;
-            }
-        } else {
-            rule.left = RuleState.ALWAYS_FALSE;
-        }
-
-        //right
-        if (x < cellNbX - 1) {
-            if (cells[x + 1, y].chunk != null) {
-                rule.right = cells[x + 1, y].chunk.left ? RuleState.ALWAYS_TRUE : RuleState.ALWAYS_FALSE;
-            }
-        } else {
-            rule.right = RuleState.ALWAYS_FALSE;
-        }
-
-        //up
-        if (y < cellNbY - 1) {
-            if (cells[x, y + 1].chunk != null) {
-                rule.up = cells[x, y + 1].chunk.down ? RuleState.ALWAYS_TRUE : RuleState.ALWAYS_FALSE;
-            }
-        } else {
-            rule.up = RuleState.ALWAYS_FALSE;
-        }
-
-        return rule;
-    }
-
-    GameObject SelectChunk(Rule rule)
-    {
-        List<GameObject> possibleNewChunk = (from t in chunksAvailable
-            let currentChunk = t.GetComponent<Chunck>()
-            where rule.down != RuleState.ALWAYS_TRUE || currentChunk.down
-            where rule.down != RuleState.ALWAYS_FALSE || !currentChunk.down
-            where rule.up != RuleState.ALWAYS_TRUE || currentChunk.up
-            where rule.up != RuleState.ALWAYS_FALSE || !currentChunk.up
-            where rule.left != RuleState.ALWAYS_TRUE || currentChunk.left
-            where rule.left != RuleState.ALWAYS_FALSE || !currentChunk.left
-            where rule.right != RuleState.ALWAYS_TRUE || currentChunk.right
-            where rule.right != RuleState.ALWAYS_FALSE || !currentChunk.right
-            select t).ToList();
-
-        return possibleNewChunk.Count == 0 ? null : possibleNewChunk[Random.Range(0, possibleNewChunk.Count)];
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
-    void OnDrawGizmos()
-    {
-        for (int x = 0; x < cellNbX; x++) {
-            for (int y = 0; y < cellNbY; y++) {
-                Gizmos.DrawWireCube(new Vector3(x * sizeX + sizeX / 2f, y * sizeY + sizeY / 2f),
-                    new Vector3(sizeX, sizeY));
-            }
+            Gizmos.DrawCube(IndexToWorldPos(i), new Vector3(sizeCell, sizeCell));
         }
     }
 }
