@@ -144,8 +144,8 @@ MonoBehaviour:
   cellNbX: 10
   cellNbY: 10
   sizeCell: 1
-  useRandomNeighborsOrder: 1
-  generationType: 1
+  useRandomNeighborsOrder: 0
+  generationType: 2
 --- !u!4 &47345152
 Transform:
   m_ObjectHideFlags: 0

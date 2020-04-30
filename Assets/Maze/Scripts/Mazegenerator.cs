@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public static class IListExtensions {
     /// <summary>
@@ -102,43 +103,55 @@ public class MazeGenerator : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         //Link case together
-        BoundsInt bounds = new BoundsInt(-1, -1, 0, 3, 3, 1);
-        List<int> openList = new List<int> {0};
-        List<int> closedList = new List<int>();
+        Stack<int> stack = new Stack<int>( );
+        stack.Push(0);
+        cells_[0].cellType = CellType.PASSAGE;
 
-        while (openList.Count > 0) {
-            int indexToSelectFrom = 0;
+        float maxDistance = 0;
+        int endIndex = 0;
 
-            int index = openList[indexToSelectFrom];
+        while (stack.Count > 0) {
+            int currentCell = stack.Pop();
             
-//          closedList.Add(openList[indexToSelectFrom]);
-            openList.RemoveAt(indexToSelectFrom);
+            List<int> possibleNextCells = new List<int>();
+            foreach (int neighborsIndex in cells_[currentCell].neighborsIndices) {
+                if (cells_[neighborsIndex].cellType == CellType.WALL) {
+                    bool canBeAddedToPassage = true;
+                    
+                    foreach (int neighborsIndex2 in cells_[neighborsIndex].neighborsIndices) {
+                        if (cells_[neighborsIndex2].cellType == CellType.WALL) continue;
+                        
+                        if(neighborsIndex2 == currentCell) continue;
+                        ;
+                        
+                        canBeAddedToPassage = false;
+                        break;
+                    }
 
-            foreach (int neighborsIndex in cells_[index].neighborsIndices) {
-                bool canBeAddedToPassage = true;
-                
-                //Check if the neighbors of the current neighbors are all wall (we don't want loop)
-                foreach (int neighborsIndex2 in cells_[neighborsIndex].neighborsIndices) {
-                    
-                    //Ignore the current cell
-                    if(neighborsIndex2 == index) continue;
-                    
-                    if (cells_[neighborsIndex2].cellType == CellType.WALL) continue;
-                    canBeAddedToPassage = false;
-                    break;
+                    if (canBeAddedToPassage) {
+                        possibleNextCells.Add(neighborsIndex);
+                    }
                 }
+            }
 
-                if (canBeAddedToPassage && !openList.Contains(neighborsIndex) && !closedList.Contains(neighborsIndex)) {
-                    openList.Add(neighborsIndex);
-                    closedList.Add(neighborsIndex);
-                    cells_[neighborsIndex].cellType = CellType.PASSAGE;
+            if (possibleNextCells.Count > 0) {
+                int choosenCell = possibleNextCells[Random.Range(0, possibleNextCells.Count)];
+                cells_[choosenCell].cellType = CellType.PASSAGE;
+                stack.Push(currentCell);
+                stack.Push(choosenCell);
+
+                float distance = Vector2.Distance(IndexToWorldPos(0), IndexToWorldPos(choosenCell));
+                if (distance > maxDistance) {
+                    maxDistance = distance;
+                    endIndex = choosenCell;
                 }
             }
             yield return new WaitForSeconds(0.1f);
         }
 
         //Select end pos
-        cells_[closedList[closedList.Count - 1]].cellType = CellType.END;
+        cells_[endIndex].cellType = CellType.END;
+        cells_[0].cellType = CellType.START;
     }
 
     IEnumerator BuildMaze() {
@@ -147,10 +160,12 @@ public class MazeGenerator : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         //Link case together
-        BoundsInt bounds = new BoundsInt(-1, -1, 0, 3, 3, 1);
         List<int> openList = new List<int> {0};
         List<int> closedList = new List<int>();
 
+        float maxDistance = 0;
+        int endIndex = 0;
+        
         while (openList.Count > 0) {
             int indexToSelectFrom = 0;
 
@@ -162,34 +177,38 @@ public class MazeGenerator : MonoBehaviour
             
             int index = openList[indexToSelectFrom];
             
-//            closedList.Add(openList[indexToSelectFrom]);
+            closedList.Add(index);
             openList.RemoveAt(indexToSelectFrom);
 
+            int nonWalledCell = 0;
+            List<int> possibleNeighbors = new List<int>();
             foreach (int neighborsIndex in cells_[index].neighborsIndices) {
-                bool canBeAddedToPassage = true;
-                
-                //Check if the neighbors of the current neighbors are all wall (we don't want loop)
-                foreach (int neighborsIndex2 in cells_[neighborsIndex].neighborsIndices) {
-                    
-                    //Ignore the current cell
-                    if(neighborsIndex2 == index) continue;
-                    
-                    if (cells_[neighborsIndex2].cellType == CellType.WALL) continue;
-                    canBeAddedToPassage = false;
-                    break;
-                }
-
-                if (canBeAddedToPassage && !openList.Contains(neighborsIndex) && !closedList.Contains(neighborsIndex)) {
-                    openList.Add(neighborsIndex);
-                    closedList.Add(neighborsIndex);
-                    cells_[neighborsIndex].cellType = CellType.PASSAGE;
+                if(cells_[neighborsIndex].cellType != CellType.WALL) {
+                    nonWalledCell++;
+                } else {
+                    if (!openList.Contains(neighborsIndex) && !closedList.Contains(neighborsIndex)) {
+                        possibleNeighbors.Add(neighborsIndex);
+                    }
                 }
             }
+
+            if (nonWalledCell <= 1) {
+                cells_[index].cellType = CellType.PASSAGE;
+                openList.AddRange(possibleNeighbors);
+                
+                float distance = Vector2.Distance(IndexToWorldPos(0), IndexToWorldPos(index));
+                if (distance > maxDistance) {
+                    maxDistance = distance;
+                    endIndex = index;
+                }
+            } 
+            
             yield return new WaitForSeconds(0.1f);
         }
 
         //Select end pos
-        cells_[closedList[closedList.Count - 1]].cellType = CellType.END;
+        cells_[endIndex].cellType = CellType.END;
+        cells_[0].cellType = CellType.START;
     }
 
     int PosToIndex(int x, int y) {
