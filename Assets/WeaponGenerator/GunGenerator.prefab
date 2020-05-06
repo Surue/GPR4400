@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7737473300337724187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7737473300337724185}
+  - component: {fileID: 7737473300337724186}
+  m_Layer: 0
+  m_Name: GunGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7737473300337724185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737473300337724187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7737473300337724186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737473300337724187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed6154fc970dae46857a76c83aed1bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites_:
+  - sprite: {fileID: 0}
+    gunType: 0
+  - sprite: {fileID: 21300000, guid: 3e68dd05730afe54c9054850abeaaf9d, type: 3}
+    gunType: 1
+  - sprite: {fileID: 21300002, guid: 3e68dd05730afe54c9054850abeaaf9d, type: 3}
+    gunType: 0
+  - sprite: {fileID: 21300004, guid: 3e68dd05730afe54c9054850abeaaf9d, type: 3}
+    gunType: 0
+  - sprite: {fileID: 21300008, guid: 3e68dd05730afe54c9054850abeaaf9d, type: 3}
+    gunType: 1
+  - sprite: {fileID: 21300086, guid: 3e68dd05730afe54c9054850abeaaf9d, type: 3}
+    gunType: 2
+  - sprite: {fileID: 21300092, guid: 3e68dd05730afe54c9054850abeaaf9d, type: 3}
+    gunType: 2
+  - sprite: {fileID: 21300074, guid: 3e68dd05730afe54c9054850abeaaf9d, type: 3}
+    gunType: 0
+  - sprite: {fileID: 21300068, guid: 3e68dd05730afe54c9054850abeaaf9d, type: 3}
+    gunType: 0
+  - sprite: {fileID: 21300162, guid: 3e68dd05730afe54c9054850abeaaf9d, type: 3}
+    gunType: 2
+  gunPrefab_: {fileID: 7276988509013694264, guid: 7c1d6da4f858fe54db0a508bcb4ead68,
+    type: 3}
+  rifleClip_:
+  - {fileID: 8300000, guid: 03b99900d81399e41a9906547bd0bd97, type: 3}
+  - {fileID: 8300000, guid: 036cec4ff3ce46c47b60c31c43c841c3, type: 3}
+  - {fileID: 8300000, guid: 0897467abf26dbd41a71a31420033459, type: 3}
+  - {fileID: 8300000, guid: ed6e4f4ab241c044d941427e8c6b70c4, type: 3}
+  - {fileID: 8300000, guid: 02ce8a68f2e37d44692af1a14497aaf6, type: 3}
+  - {fileID: 8300000, guid: 4ad5232621d534b41bc5abe74832b206, type: 3}
+  - {fileID: 8300000, guid: ab1ffded1d32da547815c2dd2d8bddfe, type: 3}
+  - {fileID: 8300000, guid: e089f41bea4ce1d4d9af8601368114a8, type: 3}
+  - {fileID: 8300000, guid: 1c960a784c7d01e4591a9d60876eadfe, type: 3}
+  handgunClip_:
+  - {fileID: 8300000, guid: 3d15e3f2182a3284fa003005b8e1163a, type: 3}
+  - {fileID: 8300000, guid: 955baaf622c38244491fefaef041d441, type: 3}
+  - {fileID: 8300000, guid: 6798b38223dd16b48a359848390a6cff, type: 3}
+  - {fileID: 8300000, guid: dfd108a58839bbf48a99f872605f92b2, type: 3}
+  - {fileID: 8300000, guid: d52b5dfa35d3c2049800e77c0e479019, type: 3}
+  - {fileID: 8300000, guid: da2e19035008e4749970fa163e690e3d, type: 3}
+  - {fileID: 8300000, guid: 62617c8456aff1c4eadf2fbfbce3b667, type: 3}
+  - {fileID: 8300000, guid: 11eeb21495514b04da1d1153326e5178, type: 3}
+  silenceClip_:
+  - {fileID: 8300000, guid: 2d3394402bb09534a9607007b0aba99b, type: 3}
+  - {fileID: 8300000, guid: 8253de38187027345b68d384ff5edcf6, type: 3}
+  - {fileID: 8300000, guid: 260df8753ec61604ca94a9cce1c4506d, type: 3}
+  - {fileID: 8300000, guid: 2b71fd9a0bf140d49bc9b226c81ab393, type: 3}
+  - {fileID: 8300000, guid: 13fe8eb7cc9889348aa07daf3d28f02d, type: 3}
+  - {fileID: 8300000, guid: c2c8dabaded154d4eab9223528d20a66, type: 3}
+  - {fileID: 8300000, guid: 6d93d096b533dfd4697dca59274567b8, type: 3}

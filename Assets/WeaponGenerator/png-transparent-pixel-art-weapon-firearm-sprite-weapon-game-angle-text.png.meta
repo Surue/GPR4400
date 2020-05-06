@@ -1,0 +1,2094 @@
+fileFormatVersion: 2
+guid: 3e68dd05730afe54c9054850abeaaf9d
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_0
+    21300002: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_1
+    21300004: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_2
+    21300006: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_3
+    21300008: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_4
+    21300010: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_5
+    21300012: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_6
+    21300014: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_7
+    21300016: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_8
+    21300018: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_9
+    21300020: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_10
+    21300022: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_11
+    21300024: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_12
+    21300026: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_13
+    21300028: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_14
+    21300030: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_15
+    21300032: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_16
+    21300034: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_17
+    21300036: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_18
+    21300038: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_19
+    21300040: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_20
+    21300042: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_21
+    21300044: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_22
+    21300046: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_23
+    21300048: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_24
+    21300050: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_25
+    21300052: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_26
+    21300054: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_27
+    21300056: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_28
+    21300058: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_29
+    21300060: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_30
+    21300062: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_31
+    21300064: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_32
+    21300066: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_33
+    21300068: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_34
+    21300070: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_35
+    21300072: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_36
+    21300074: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_37
+    21300076: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_38
+    21300078: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_39
+    21300080: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_40
+    21300082: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_41
+    21300084: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_42
+    21300086: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_43
+    21300088: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_44
+    21300090: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_45
+    21300092: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_46
+    21300094: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_47
+    21300096: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_48
+    21300098: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_49
+    21300100: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_50
+    21300102: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_51
+    21300104: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_52
+    21300106: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_53
+    21300108: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_54
+    21300110: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_55
+    21300112: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_56
+    21300114: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_57
+    21300116: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_58
+    21300118: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_59
+    21300120: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_60
+    21300122: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_61
+    21300124: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_62
+    21300126: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_63
+    21300128: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_64
+    21300130: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_65
+    21300132: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_66
+    21300134: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_67
+    21300136: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_68
+    21300138: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_69
+    21300140: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_70
+    21300142: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_71
+    21300144: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_72
+    21300146: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_73
+    21300148: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_74
+    21300150: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_75
+    21300152: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_76
+    21300154: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_77
+    21300156: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_78
+    21300158: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_79
+    21300160: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_80
+    21300162: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_81
+    21300164: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_82
+    21300166: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_83
+    21300168: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_84
+    21300170: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_85
+    21300172: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_86
+    21300174: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_87
+    21300176: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_88
+    21300178: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_89
+    21300180: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_90
+    21300182: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_91
+    21300184: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_92
+    21300186: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_93
+    21300188: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_94
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 622
+        width: 45
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58888dbf30b9fa14e9aa6e8902984c5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 619
+        width: 87
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f6f4e4eb4ff1e4aae6f1e79605316d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_2
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 601
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4dc4e81adbd6a48b84e4ba8bb3930f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_3
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 605
+        width: 67
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6f4b824dc1ff241974cf377c4914da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_4
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 615
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e7839dbee4a044dbfcff1a6c6b5bb5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_5
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 615
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01217fe7349172943be6ec9e81d15925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_6
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 615
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee0438ea483a7f40a674f441fdc33c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_7
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 615
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51d86cbf9db6e64b9d7a5c5c734a3ed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_8
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 581
+        width: 60
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0741e97c2a687747a3ab004c469aa0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_9
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 581
+        width: 112
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e781748acc661d4fbd176d589f280ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_10
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 566
+        width: 79
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b797324f78c46f543b1d2d2d2833de28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_11
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 587
+        width: 69
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7f0c69d38fc314aa96daa57afe4407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_12
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 570
+        width: 91
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353bed881fd80194a9a694464487d64f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_13
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 593
+        width: 54
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fabc7c951709541ae8ad3f747d5488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_14
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 593
+        width: 54
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2f456ec1aaeaf48b6317d388bf5399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_15
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 583
+        width: 47
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ae1c006510a8f49b597c79bc69de3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_16
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 583
+        width: 47
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b5ce4d1a26697489a8aace8c69e4f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 537
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6bf007a67e3c744a36b7bd4f221978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_18
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 539
+        width: 87
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af77802782a26434d97eece68d816a87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_19
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 547
+        width: 87
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c7cae49417ba540a4b423fb32541d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_20
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 570
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e0d02039fdb1f4888340a16e373095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_21
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 570
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e5700e9bedbae4fb87dbcf1f01cb85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_22
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 529
+        width: 58
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e9a0037ed4d7b489036625f47d0aa7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_23
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 546
+        width: 54
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a75f18d2a834fc4cb06cb022f244007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_24
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 533
+        width: 67
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7dd98c7919f132418e602b350c8caec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_25
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 547
+        width: 54
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31c031f4bb534e478d515e9628f692d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_26
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 547
+        width: 54
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b15509906226074cbc6a4a7ce77e1c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_27
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 496
+        width: 45
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f83c5b6c94dd2f4aadd7ecda6147707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_28
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 500
+        width: 87
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea462021bc945443ae98a663e76863d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_29
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 494
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b795adfcfc62943863d926d4af4f1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_30
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 520
+        width: 80
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6de07ebe30c03147ad3a76e014218cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_31
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 506
+        width: 69
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5effecc2d734b734e8b5c4a3ffcedca1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_32
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 498
+        width: 67
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c70529d5dd77542ba0582dcc603002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_33
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 515
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b19ac6298e444942851307f36b47003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_34
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 515
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4c2f48e20f5c649bcd5a7df3cc08e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_35
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 461
+        width: 111
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc810431a395524a993e71c0b8ec675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_36
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 489
+        width: 54
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ee734f64bb91b4c93eb3afaaccaa37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_37
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 467
+        width: 69
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c107fcdf4d62dc046a35b2719c492ac7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_38
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 462
+        width: 92
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9774d6595598c9b4dbe9b18c1796dc24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_39
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 482
+        width: 56
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d410a638e84c0c48be1f458007fb66c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_40
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 482
+        width: 55
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7552db1b4f8af40874daa7f23296e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 455
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4398c93f9d9d1c743a2d9f53843bd5f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_42
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 458
+        width: 82
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1990ebc28d7343b49b70d0438a70d667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_43
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 462
+        width: 78
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80baf5f0b64e2b645ada9bf6f877d0c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_44
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 461
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02512bc58ececbe4f875536bcebf46d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_45
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 461
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8cb401ba948634c92186e137642720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_46
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 411
+        width: 85
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1548b2dd97798b49a2c2327fbb43f90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_47
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 420
+        width: 138
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8e68aa8ac281246ae74db52e2cf401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_48
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 421
+        width: 103
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4147082ea31df4fa5cc866c8c48d90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_49
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 431
+        width: 102
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccd3f1caa524ac49baa7c3719d662a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_50
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 426
+        width: 87
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605b7eae72d155e4989d30374c5b3c2e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_51
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 426
+        width: 116
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d413702a1577d1b49bab1e216c6e2246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_52
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 440
+        width: 56
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9855cd371cc261409b5c186da868570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_53
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 440
+        width: 55
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87decdb750dbae54eb7850696578342b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_54
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 406
+        width: 54
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23cb4616628b6f42b96a08839458044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_55
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 386
+        width: 69
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b276f8d86ba6b37438bc768fdc419570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_56
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 390
+        width: 91
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6a352bd8306f348b510049f7972d39
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_57
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 417
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23897855ac458e34a9eadc367d8eaa0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_58
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 417
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8058f99fbd16c34c88d89a4cc6abe4a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_59
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 417
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d54bd0bfcd7c4e4fabb39719f1eb23d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_60
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 417
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1ea163a756b7941b5547cbeba7d0b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_61
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 370
+        width: 45
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397e5be3d764ee94293dc1553d9ebb2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_62
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 380
+        width: 112
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b431f10ff4f8ec146bf330fb90a4f317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_63
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 386
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332e4e029868eb7489ce091dbd05c6d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_64
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 401
+        width: 37
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0edb4874ff638e498a2e8fb8668b9b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_65
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 352
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1257bda019e41c4385c6dabe9256172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_66
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 379
+        width: 57
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19153cb8dc51ec4cb824fb1039b6b4f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_67
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 349
+        width: 74
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58b71d00b841654c9d2e0aa63af0902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_68
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 356
+        width: 67
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21594603f342f4746ab0d0a3d9fbf1f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_69
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 329
+        width: 49
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6933d231495e7dc47a2cc79712917ad3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_70
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 341
+        width: 87
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4f3312f1bfc4843bd6a5dc01448099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_71
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 352
+        width: 80
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ee73eb8f30ad14ea7c473e2da2f944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_72
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 302
+        width: 87
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a564552342f16b241a2f54509522e8a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_73
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 321
+        width: 67
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b57a7a68f5d79047a1d7a1242813eec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_74
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 263
+        width: 87
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725d6feeeaf990247aac5df82140c422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_75
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 271
+        width: 111
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163b7572c3aab804ca3d60f91c56d80d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_76
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 280
+        width: 90
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caad0d19fec35084f902f4b9816e747f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_77
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 281
+        width: 108
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee557bfb9f66a69498612a96db11e501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_78
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 228
+        width: 112
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5a00ad72549054daef0d8a512c7ef0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_79
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 240
+        width: 111
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11fb384979c212d418181d5e7cd8bd5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_80
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 250
+        width: 120
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d69294cc4cb8c148a30241ffdc1ba8d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_81
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 244
+        width: 135
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a5a0bf19963444a90cccc7fe79be8c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_82
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 186
+        width: 87
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfbdbbbc96c348a4cb2a82dbabc82e90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_83
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 218
+        width: 90
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee94d71a8fa914479fbf602099e080e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_84
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 208
+        width: 108
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28514fe75eeda2947812f184bf500770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_85
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 188
+        width: 90
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c377a4e84e0f04486267447d9f032d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_86
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 151
+        width: 87
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0920e9926ac866b439463a806de9162c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_87
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 160
+        width: 117
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5c1ed580a2ba940b20b9928f8c5dba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_88
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 116
+        width: 112
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d14e96c721a25149993724e2aacec7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_89
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 127
+        width: 147
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735d11367e149b44f9094798e2bc3657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_90
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 75
+        width: 137
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b38a255739907043ba342d50d2f920e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_91
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 98
+        width: 96
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e596c14610f5b419137bc5a5e6e9af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_92
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 41
+        width: 87
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d410a21110f2f41b1ba30fa5b25274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_93
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 69
+        width: 90
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b7dcd98e33f9649b55380e07b802cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-pixel-art-weapon-firearm-sprite-weapon-game-angle-text_94
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 5
+        width: 87
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac8d73b696868d459ccff98b68e4c09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 27cb9c765918105409db07724eeb9915
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
