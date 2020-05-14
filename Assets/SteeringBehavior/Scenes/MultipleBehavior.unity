@@ -365,9 +365,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockwise_: 1
-  stoppingDistance_: 0.1
-  movementType_: 2
+  stoppingDistance_: 0.5
+  movementType_: 4
   speed_: 5
+  maxForce_: 5
+  arrivalDistance_: 3.5
+  body_: {fileID: 1321686626}
 --- !u!212 &1321686624
 SpriteRenderer:
   m_ObjectHideFlags: 0
