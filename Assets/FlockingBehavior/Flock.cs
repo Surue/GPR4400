@@ -33,7 +33,7 @@ public class Flock : MonoBehaviour {
         foreach (Agent agent in agents_) {
             List<Transform> neighbor = GetNeighbor(agent);
 
-            agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.black, neighbor.Count / 6.0f); //THIS IF FOR DEBUG PURPUSE NEVER DO THAT AGAIN
+            agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.black, neighbor.Count / 24.0f); //THIS IF FOR DEBUG PURPUSE NEVER DO THAT AGAIN
             
             agent.Move(steeringBehavior_.CalculateMove(agent, neighbor));
         }
